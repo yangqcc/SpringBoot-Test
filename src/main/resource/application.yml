@@ -1,0 +1,3 @@
+server:
+  address: "${HTTP_BIND_ADDRESS:0.0.0.0}"
+  port: "${HTTP_BIND_PORT:18080}"
