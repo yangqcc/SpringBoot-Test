@@ -1,3 +1,14 @@
+spring:
+  profiles: default
+  data:
+    mongodb:
+      uri: mongodb://127.0.0.1:27017/test
+  http:
+    multipart:
+      max-file-size: 16MB
+      max-request-size: 16MB
+  application :
+     name: "sc"
 server:
   address: "${HTTP_BIND_ADDRESS:0.0.0.0}"
   port: "${HTTP_BIND_PORT:18080}"

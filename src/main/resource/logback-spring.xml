@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration>
+<configuration>
+
+    <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
+    <!--<property name="LOG_HOME" value="C:/Users/yangqc/Desktop/test/log" />-->
+    <!--应用名称-->
+    <property name="APP_NAME" value="yangqc-test"/>
+    <!--开发环境日志配置-->
+    <springProfile name="default">
+        <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+            <encoder>
+                <pattern>%d{ISO8601} ${APP_NAME} %-5level %logger{36} - %msg%n</pattern>
+            </encoder>
+        </appender>
+        <logger name="org.springframework.data.mongodb" level="DEBUG"/>
+        <root level="INFO">
+            <appender-ref ref="STDOUT"/>
+        </root>
+    </springProfile>
+    <!--测试环境日志配置-->
+    <springProfile name="test">
+        <appender name="TEST_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <fileNamePattern>LOG_HOME/test.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <maxHistory>30</maxHistory>
+                <totalSizeCap>30GB</totalSizeCap>
+            </rollingPolicy>
+            <encoder>
+                <pattern>%date{ISO8601} ${APP_NAME} %-5level %logger{36} - %msg%n</pattern>
+            </encoder>
+            <!--日志文件最大的大小-->
+            <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+                <MaxFileSize>100MB</MaxFileSize>
+            </triggeringPolicy>
+        </appender>
+        <logger name="org.springframework.data.mongodb" level="DEBUG"/>
+        <!--
+        root节点是必选节点，用来指定最基础的日志输出级别，只有一个level属性。
+        level:用来设置打印级别，大小写无关：TRACE, DEBUG, INFO, WARN, ERROR, ALL 和 OFF，不能设置为INHERITED或者同义词NULL，默认是DEBUG。
+        <root>可以包含零个或多个<appender-ref>元素，标识这个appender将会添加到这个loger。
+        -->
+        <root level="DEBUG">
+            <appender-ref ref="TEST_FILE"/>
+        </root>
+    </springProfile>
+</configuration>
