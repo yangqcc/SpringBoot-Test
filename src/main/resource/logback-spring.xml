@@ -3,7 +3,7 @@
 <configuration>
 
     <!--定义日志文件的存储地址 勿在 LogBack 的配置中使用相对路径-->
-    <!--<property name="LOG_HOME" value="C:/Users/yangqc/Desktop/test/log" />-->
+    <property name="LOG_HOME" value="C:/Users/yangqc/Desktop/test/logs"/>
     <!--应用名称-->
     <property name="APP_NAME" value="yangqc-test"/>
     <!--开发环境日志配置-->
@@ -21,8 +21,9 @@
     <!--测试环境日志配置-->
     <springProfile name="test">
         <appender name="TEST_FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <!--<File>log/info.log</File>-->
             <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
-                <fileNamePattern>LOG_HOME/test.%d{yyyy-MM-dd}.log</fileNamePattern>
+                <fileNamePattern>logs/test.%d{yyyy-MM-dd}.log</fileNamePattern>
                 <maxHistory>30</maxHistory>
                 <totalSizeCap>30GB</totalSizeCap>
             </rollingPolicy>

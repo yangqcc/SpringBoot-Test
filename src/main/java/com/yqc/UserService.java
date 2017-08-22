@@ -4,6 +4,7 @@ import com.yqc.domain.User;
 import com.yqc.repository.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.stereotype.Service;
 
 /**
@@ -15,6 +16,8 @@ import org.springframework.stereotype.Service;
 public class UserService {
 
     private final UserRepository userRepository;
+
+    MongoTemplate mongoTemplate;
 
     /**
      * 保存人员信息
