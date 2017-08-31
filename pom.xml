@@ -105,6 +105,12 @@ pom是可以继承的，通常对于一个大型的项目或是多个module的�
             <artifactId>logback-classic</artifactId>
             <version>${logback.version}</version>
         </dependency>
+        <!--springboot热部署-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
     </dependencies>
 
     <build>
