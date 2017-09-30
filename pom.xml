@@ -135,8 +135,6 @@ pom是可以继承的，通常对于一个大型的项目或是多个module的�
                             <include>${project.build.finalName}.jar</include>
                         </resource>
                     </resources>
-                    <serverId>docker-hub</serverId>
-                    <registryUrl>https://registry.cn-hangzhou.aliyuncs.com/yangqc_test/test</registryUrl>
                     <useConfigFile>true</useConfigFile>
                 </configuration>
             </plugin>
