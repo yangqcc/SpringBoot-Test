@@ -2,7 +2,7 @@ spring:
   profiles: test
   data:
     mongodb:
-      uri: mongodb://127.0.0.1:27017/test
+      uri: mongodb://192.168.1.24:27017/test
   http:
     multipart:
       max-file-size: 16MB
