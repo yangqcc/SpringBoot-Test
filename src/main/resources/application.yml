@@ -1,14 +1,28 @@
 spring:
   profiles: default
-  data:
-    mongodb:
-      uri: mongodb://192.168.10.161:27017/test
+  datasource:
+    url: jdbc:mysql://10.33.10.206:31638/zjk?characterEncoding=UTF-8&useSSL=false
+    username: cityos
+    password: cityos@2017
+    driver-class-name: com.mysql.jdbc.Driver
   http:
     multipart:
       max-file-size: 16MB
       max-request-size: 16MB
   application :
-     name: "sc"
+     name: "hb"
+
 server:
   address: "${HTTP_BIND_ADDRESS:0.0.0.0}"
   port: "${HTTP_BIND_PORT:18080}"
+
+application:
+  cors:
+    allowed-origins: "*"
+    allowed-methods: "GET, PUT, POST, DELETE, OPTIONS"
+    allowed-headers: "*"
+    exposed-headers: "X-Total-Count"
+  async:
+    corePoolSize: 2
+    maxPoolSize: 50
+    queueCapacity: 1000

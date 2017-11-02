@@ -34,6 +34,7 @@ pom是可以继承的，通常对于一个大型的项目或是多个module的�
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <slf4j.version>1.7.7</slf4j.version>
+        <mysql.version>5.1.40</mysql.version>
         <docker.image.prefix>yangqc</docker.image.prefix>
     </properties>
 
@@ -50,7 +51,7 @@ pom是可以继承的，通常对于一个大型的项目或是多个module的�
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -111,6 +112,17 @@ pom是可以继承的，通常对于一个大型的项目或是多个module的�
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
             <optional>true</optional>
+        </dependency>
+        <!-- mysql driver-->
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.sun.jna</groupId>
+            <artifactId>jna</artifactId>
+            <version>3.0.9</version>
         </dependency>
     </dependencies>
 

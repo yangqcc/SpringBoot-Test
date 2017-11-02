@@ -1,4 +1,4 @@
-package com.yqc.config;
+package com.cityos.hb.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -22,7 +22,7 @@ public class Swagger2 {
         return new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(aipInfo())
                 .select()
-                .apis(RequestHandlerSelectors.basePackage("com.yqc"))
+                .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
                 .build();
     }
@@ -30,7 +30,7 @@ public class Swagger2 {
     private ApiInfo aipInfo() {
         return new ApiInfoBuilder()
                 .title("Spring Boot中使用Swagger2构建 Rest APIs")
-                .description("杨期成创建")
+                .description("环保")
                 .contact("链接")
                 .version("1.0")
                 .build();
