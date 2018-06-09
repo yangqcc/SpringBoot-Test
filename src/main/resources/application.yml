@@ -1,16 +1,16 @@
 spring:
   profiles: default
   datasource:
-    url: jdbc:mysql://10.33.10.206:31638/zjk?characterEncoding=UTF-8&useSSL=false
-    username: cityos
-    password: cityos@2017
+    url: jdbc:mysql://localhost:3306/zm?characterEncoding=UTF-8&useSSL=false
+    username: root
+    password: 123
     driver-class-name: com.mysql.jdbc.Driver
   http:
     multipart:
       max-file-size: 16MB
       max-request-size: 16MB
   application :
-     name: "hb"
+     name: "test"
 
 server:
   address: "${HTTP_BIND_ADDRESS:0.0.0.0}"

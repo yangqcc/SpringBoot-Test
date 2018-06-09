@@ -1,4 +1,4 @@
-package com.cityos.hb.exception;
+package com.yqc.springboot.exception;
 
 /**
  * 业务异常基类

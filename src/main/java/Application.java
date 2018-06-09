@@ -4,13 +4,14 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 /**
- * Created by admin on 2017/3/1.
+ * @author admin
+ * @date 2017/3/1
  */
 @EnableAutoConfiguration
-@SpringBootApplication(scanBasePackages = {"com.cityos.hb", "com.cityos.hb.config"})
+@SpringBootApplication(scanBasePackages = {"com.yqc.springboot", "com.yqc.springboot.config"})
 public class Application {
 
-    public static void main(String[] args) throws Exception {
-        SpringApplication.run(Application.class, args);
-    }
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
 }

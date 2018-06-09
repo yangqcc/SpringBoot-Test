@@ -1,4 +1,4 @@
-package com.cityos.hb.config;
+package com.yqc.springboot.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

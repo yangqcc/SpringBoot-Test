@@ -1,6 +1,6 @@
-package com.cityos.hb.config;
+package com.yqc.springboot.config;
 
-import com.cityos.hb.async.ExceptionHandlingAsyncTaskExecutor;
+import com.yqc.springboot.async.ExceptionHandlingAsyncTaskExecutor;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.aop.interceptor.AsyncUncaughtExceptionHandler;

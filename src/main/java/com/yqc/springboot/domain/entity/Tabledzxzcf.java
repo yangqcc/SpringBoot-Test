@@ -1,4 +1,4 @@
-package com.cityos.hb.domain.entity;
+package com.yqc.springboot.domain.entity;
 
 import lombok.Data;
 

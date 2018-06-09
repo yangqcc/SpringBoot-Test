@@ -1,19 +1,19 @@
-package com.cityos.hb.exception;
+package com.yqc.springboot.exception;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.Setter;
 
 /**
- * 实体未找到异常
+ * Created by yangqc on 2017/10/25
  */
 @AllArgsConstructor
-public class JsonFileException extends CCException {
+public class NotFoundException extends CCException {
 
     /**
      * 实体名称
      */
     @Getter
     @Setter
-    private String jsonFile;
+    private String entityName;
 }

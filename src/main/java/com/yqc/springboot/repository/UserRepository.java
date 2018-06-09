@@ -1,4 +1,4 @@
-package com.cityos.hb.repository;
+package com.yqc.springboot.repository;
 
 /**
  * Created by yangqc on 2017/8/20

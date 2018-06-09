@@ -1,4 +1,4 @@
-package com.cityos.hb.config;
+package com.yqc.springboot.config;
 
 import lombok.Getter;
 import lombok.Setter;

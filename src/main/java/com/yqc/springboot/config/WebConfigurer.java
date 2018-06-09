@@ -1,4 +1,4 @@
-package com.cityos.hb.config;
+package com.yqc.springboot.config;
 
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;

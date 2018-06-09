@@ -1,4 +1,4 @@
-package com.cityos.hb.domain;
+package com.yqc.springboot.domain;
 
 /**
  * 常量
