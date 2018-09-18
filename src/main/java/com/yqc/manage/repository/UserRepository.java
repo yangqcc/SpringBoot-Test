@@ -1,4 +1,4 @@
-package com.yqc.springboot.repository;
+package com.yqc.manage.repository;
 
 /**
  * Created by yangqc on 2017/8/20

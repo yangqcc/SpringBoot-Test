@@ -1,4 +1,4 @@
-package com.yqc.springboot.domain.model;
+package com.yqc.manage.domain.model;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.yqc.springboot.domain;
+package com.yqc.manage.domain;
 
 /**
  * 常量

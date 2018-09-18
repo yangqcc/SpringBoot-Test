@@ -1,4 +1,4 @@
-package com.yqc.springboot.domain.entity;
+package com.yqc.manage.domain.entity;
 
 import lombok.Data;
 

@@ -1,4 +1,4 @@
-package com.yqc.springboot.config;
+package com.yqc.manage.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
